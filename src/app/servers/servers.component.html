@@ -1,2 +1,10 @@
+
+<input type="text" class="form-control" (input) = "serverName($event)">
+<button class="btn btn-primary" [disabled] = "!allowNewServer" (click)="ServerCreathion()"> add a new server</button>
+<p> {{ NewServerName }}</p>
+<hr>
+
+
+<p>{{ ServerCreathionStatus }}</p>
 <app-server></app-server>
 <app-server></app-server>
