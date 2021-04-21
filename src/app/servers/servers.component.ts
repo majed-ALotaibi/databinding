@@ -20,7 +20,7 @@ ServerCreathionStatus:string = "no server is created";
     ServerCreathion(){
       this.ServerCreathionStatus = "a new server has been created";
     }
-    NewServerName:string ="";
+    NewServerName:string =" name me master";
     serverName(event: Event){
       console.log(event);
       this.NewServerName = (<HTMLInputElement>event.target).value;
