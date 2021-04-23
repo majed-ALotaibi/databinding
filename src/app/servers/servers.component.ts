@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent  {
-
+ServerCreated = false;
 allowNewServer = false;
 
 constructor(){
@@ -19,6 +19,7 @@ ServerCreathionStatus:string = "no server is created";
 
     ServerCreathion(){
       this.ServerCreathionStatus = "a new server has been created";
+      this.ServerCreated= true;
     }
     NewServerName:string =" name me master";
     serverName(event: Event){

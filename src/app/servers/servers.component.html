@@ -1,17 +1,19 @@
 
 <input type="text" class="form-control" (input) = "serverName($event)">  <!--  event binding -->
-<input type="text" class="form-control"[(ngModel)] = "NewServerName" name="" id=""> <!--  2 way binding -->
+<!-- <input type="text" class="form-control"[(ngModel)] = "NewServerName" name="" id="">  2 way binding -->
 
 <button class="btn btn-primary" [disabled] = "!allowNewServer" (click)="ServerCreathion()"> add a new server</button> <!-- property binding +
      event binding -->
 
-<p> {{ NewServerName }}  </p> <!--  string interpolation -->
+<!-- <p> {{ NewServerName }}  </p>  string interpolation -->
 <hr>
+
+<p *ngIf= "ServerCreated">{{ NewServerName }}</p> <!-- ngId directive -->
 
 <!--  4 way to bind data binding -->
 <!--  properti binding and string interpolation from the ts to the html page -->
 <!--  event binding respoend to the event in the html page and then to the ts -->
 <!--  2 way binding is from the html to the ts and from the ts to the html at the same time -->
-<p>{{ ServerCreathionStatus }}</p>
+ <!-- <p>{{ ServerCreathionStatus }}</p> -->
 <app-server></app-server>
 <app-server></app-server>
