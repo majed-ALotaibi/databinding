@@ -8,7 +8,10 @@
 <!-- <p> {{ NewServerName }}  </p>  string interpolation -->
 <hr>
 
-<p *ngIf= "ServerCreated">{{ NewServerName }}</p> <!-- ngId directive -->
+<p *ngIf= "ServerCreated else noServer" >{{ NewServerName }}</p> <!-- ngId directive -->
+<ng-template #noServer >
+     <p #noServer>no server was created</p>
+</ng-template>
 
 <!--  4 way to bind data binding -->
 <!--  properti binding and string interpolation from the ts to the html page -->
